@@ -1,3 +1,5 @@
+const Math = {};
+
 function add(x1, x2){
     return x1 + x2;
 }
@@ -14,7 +16,14 @@ function divide(x1, x2){
         return x1 / x2;
     
 }
+function hello(name){
+    console.log('Hola ',name);
+}
+Math.add = add;
+Math.substract = substract;
+Math.multiply = multiply;
+Math.divide = divide;
+Math.hello = hello;
 
-exports.suma = add;
-exports.resta = substract;
-exports.divide = divide;
+module.exports = Math;
+// module.exports = hello;   //permite exportar objetos, funciones, variable etc.
